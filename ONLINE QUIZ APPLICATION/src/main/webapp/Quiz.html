@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+        .navbar h1 {
+            margin: 0;
+            font-size: 24px;
+            line-height: 1.2;
+        }
+         .navbar .roll-number-container
+          {
+    display: flex;
+    align-items: center;
+    margin-left: 1000px; 
+}
+
+.navbar .roll-number-container label {
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: bold; /* Bold font for label */
+}
+
+.navbar .roll-number-container input {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+}
+         
+        .quiz-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .question {
+            margin-bottom: 25px;
+        }
+        .question h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+        .options {
+            margin-top: 10px;
+        }
+        .options label {
+            display: block;
+            padding: 8px;
+            margin-bottom: 5px;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .options label:hover {
+            background-color: #e0e0e0;
+        }
+        .options input[type="radio"] {
+            margin-right: 10px;
+            }
+     input[type="submit"] {
+    display: inline-block;
+    width: 150px; /* Adjust width as needed */
+    padding: 12px 20px; /* Vertical and horizontal padding */
+    font-size: 16px; /* Font size for readability */
+    font-family: 'Arial', sans-serif; /* Font family for modern look */
+    font-weight: bold; /* Bold text for emphasis */
+    color: #fff; /* Text color */
+    background-color: #007bff; /* Primary background color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-align: center; /* Center text horizontally */
+    text-transform: uppercase; /* Uppercase text */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition effects */
+    margin: 20px auto; /* Center the button horizontally */
+    display: block; /* Ensure the button is centered if block-level */
+}
+
+/* Hover state styling */
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker shade of background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+/* Focus state styling */
+input[type="submit"]:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.5); /* Custom focus outline */
+}
+     
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body><br><br>
+    <div class="quiz-container">
+        <form id="quizForm" action="Quiz.jsp" method="post">
+        
+        <div class="navbar">
+        <h1>JAVA AND .NET TECHNICAL QUIZ</h1>
+        <div class="roll-number-container">
+            <label for="rollno">Roll Number</label>
+            <input type="text" id="rollno" name="rollno" placeholder="Enter Roll Number">
+        </div>
+       
+    </div>
+        
+            <div class="question">
+            <br><br><br>
+                <h3>1. What is the primary purpose of the `JVM` in Java?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A"> A) Compiling Java code into bytecode</label>
+                    <label><input type="radio" name="q1" value="B"> B) Executing bytecode on any device</label>
+                    <label><input type="radio" name="q1" value="C"> C) Managing Java objects in memory</label>
+                    <label><input type="radio" name="q1" value="D"> D) Converting Java code into machine code</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>2. Which of the following is NOT a feature of .NET?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A"> A) Cross-language interoperability</label>
+                    <label><input type="radio" name="q2" value="B"> B) Automatic garbage collection</label>
+                    <label><input type="radio" name="q2" value="C"> C) Platform-specific code execution</label>
+                    <label><input type="radio" name="q2" value="D"> D) Common Language Runtime (CLR)</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>3. In SQL, which keyword is used to retrieve unique records from a table?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A"> A) DISTINCT</label>
+                    <label><input type="radio" name="q3" value="B"> B) UNIQUE</label>
+                    <label><input type="radio" name="q3" value="C"> C) DIFFERENT</label>
+                    <label><input type="radio" name="q3" value="D"> D) SELECT</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>4. What is the purpose of the `final` keyword in Java?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A"> A) To prevent modification of a variable, method, or class</label>
+                    <label><input type="radio" name="q4" value="B"> B) To declare a constant variable</label>
+                    <label><input type="radio" name="q4" value="C"> C) To override a method in a subclass</label>
+                    <label><input type="radio" name="q4" value="D"> D) To indicate that a class is abstract</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>5. In C#, which of the following access modifiers allows access only within the same class and derived classes?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A"> A) public</label>
+                    <label><input type="radio" name="q5" value="B"> B) private</label>
+                    <label><input type="radio" name="q5" value="C"> C) protected</label>
+                    <label><input type="radio" name="q5" value="D"> D) internal</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>6. Which design pattern is used to create a single instance of a class and provide a global point of access to it?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="A"> A) Singleton</label>
+                    <label><input type="radio" name="q6" value="B"> B) Factory</label>
+                    <label><input type="radio" name="q6" value="C"> C) Observer</label>
+                    <label><input type="radio" name="q6" value="D"> D) Builder</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>7. What does the `async` keyword indicate in a method declaration in C#?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="A"> A) The method will run synchronously</label>
+                    <label><input type="radio" name="q7" value="B"> B) The method can return a Task or Task<T> and will execute asynchronously</label>
+                    <label><input type="radio" name="q7" value="C"> C) The method will execute in parallel</label>
+                    <label><input type="radio" name="q7" value="D"> D) The method will throw an exception if it cannot complete</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>8. Which of the following is the correct syntax for declaring an array in Java?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="A"> A) int[] arr;</label>
+                    <label><input type="radio" name="q8" value="B"> B) array int arr;</label>
+                    <label><input type="radio" name="q8" value="C"> C) int arr[];</label>
+                    <label><input type="radio" name="q8" value="D"> D) int arr;</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>9. In which type of database does normalization mainly apply?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="A"> A) NoSQL</label>
+                    <label><input type="radio" name="q9" value="B"> B) Object-Oriented</label>
+                    <label><input type="radio" name="q9" value="C"> C) Relational</label>
+                    <label><input type="radio" name="q9" value="D"> D) Graph</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>10. What is the function of the `try-catch` block in Java?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="A"> A) To handle exceptions and prevent the program from crashing</label>
+                    <label><input type="radio" name="q10" value="B"> B) To ensure a piece of code is always executed</label>
+                    <label><input type="radio" name="q10" value="C"> C) To declare a method that can throw exceptions</label>
+                    <label><input type="radio" name="q10" value="D"> D) To create a new instance of an exception object</label>
+                </div>
+            </div>
+
+           <input type="submit"  value="Submit">
+        </form>
+    </div>
+</body>
+</html>
